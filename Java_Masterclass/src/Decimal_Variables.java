@@ -26,10 +26,11 @@ public class Decimal_Variables {
 		
 		System.out.print("Enter amount of pounds: ");
 		double pounds = pound.nextDouble();
-		System.out.println(pounds);
+		double kilograms = 0.45359237;
+		double conversion = pounds * kilograms;
 		
-		double kilograms = pounds * 0.45359237;
 		
+		System.out.println(pounds +" pounds are in kilograms " + conversion + "kg.");
 
 
 		}
