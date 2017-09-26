@@ -2,41 +2,19 @@
 public class Methods {
 
 	public static void main(String[] args) {
-		boolean gameOver = true;
-		int score = 800;
-		int scoreRound2 = 10000;
-		int levelCompleted = 5;
-		int LevelCompletedRound2 = 8;
-		int bonus = 100;
-		int bonusRoud2 = 200;
 		
-		
-		
-		
-		if(score < 5000 && score >1000){
-			System.out.println("Your score was " + score + " which is less than 5000.");
-		} else if(score < 1000){
-			System.out.println("Your score was " + score + " thats so lame.");
-		} else {
-			System.out.println("Your score was " + score +" which is more than 5000");
-		}
-		
-		System.out.println("");
-		
-		// This also means that gameOver is true
+		calculateScore(true ,800, 5, 100);
+		calculateScore(true, 10000, 8, 200);
+	}
+
+	public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
 		if(gameOver){
 			int finalScore = score + (levelCompleted * bonus);
 			System.out.println("Your final score was " + finalScore);
 			System.out.println("");
+			return finalScore;
 		}
-		
-		if(gameOver){
-			int finalScoreRound2 = scoreRound2 + (LevelCompletedRound2 * bonusRoud2);
-			System.out.println("Round 2 final score was " + finalScoreRound2);
+			return 0;
 		}
-		
-			
-
 	}
-
-}
+	
