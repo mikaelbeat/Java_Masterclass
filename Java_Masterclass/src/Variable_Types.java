@@ -4,22 +4,22 @@ public class Variable_Types {
 	public static void main(String[] args) {
 		
 		// int has a width of 32.
-		int MinValue = -2_147_483_648;
-		int MaxValue = 2_147_483_647;
+		int minValue = -2_147_483_648;
+		int maxValue = 2_147_483_647;
 		
 		// byte has a width of 8.
-		byte MinByteValue = -128;
-		byte MaxByteValue = 127;
+		byte minByteValue = -128;
+		byte maxByteValue = 127;
 		// Casting, defining new variable as byte
-		byte NewByteValue  = (byte) (MaxByteValue/2);
+		byte newByteValue  = (byte) (maxByteValue/2);
 		
 		// short has width of 16.
-		short MinShortValue = -32_768;
-		short MaxShortValue = 32_767;
+		short minShortValue = -32_768;
+		short maxShortValue = 32_767;
 		
 		// long has widht of 64.
-		long MinLongValue = -9_223_372_036_854_775_808L;
-		long MaxLongValue =  9_223_372_036_854_775_807L;
+		long minLongValue = -9_223_372_036_854_775_808L;
+		long maxLongValue =  9_223_372_036_854_775_807L;
 	}
 
 }

@@ -8,17 +8,17 @@ public class Decimal_Variables {
 	public static void main(String[] args) {
 		
 		// Width of int is 32.
-		int IntValue  = 5 / 2;
+		int intValue  = 5 / 2;
 		
 		// Width of float is 32.
-		float FloatValue = 5f / 3f;
+		float floatValue = 5f / 3f;
 		
 		// Width of double is 64.
-		double DoubleValue = 5d / 3d;
+		double doubleValue = 5d / 3d;
 		
-		System.out.println("Int values is " + IntValue);
-		System.out.println("Float value is " + FloatValue);
-		System.out.println("Double value is " + DoubleValue);
+		System.out.println("Int values is " + intValue);
+		System.out.println("Float value is " + floatValue);
+		System.out.println("Double value is " + doubleValue);
 		System.out.println("");
 		System.out.println("");
 		System.out.println("");
@@ -26,7 +26,7 @@ public class Decimal_Variables {
 		
 		System.out.print("Enter amount of pounds: ");
 		double pounds = pound.nextDouble();
-		double kilograms = 0.45359237;
+		double kilograms = 0.45359237d;
 		double conversion = pounds * kilograms;
 		
 		
