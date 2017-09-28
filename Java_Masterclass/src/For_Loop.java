@@ -1,11 +1,8 @@
-import java.util.Scanner;
+
 
 public class For_Loop {
 	
-	static Scanner moneyAmount = new Scanner (System.in);
-	static Scanner intetersRate = new Scanner (System.in);
-	static Scanner startInterest = new Scanner (System.in);
-	static Scanner endInterest = new Scanner (System.in);
+
 
 	public static void main(String[] args) {
 		
