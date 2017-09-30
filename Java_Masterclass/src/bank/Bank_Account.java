@@ -8,6 +8,8 @@ public class Bank_Account {
 	private String customerEmail;
 	private int phoneNumber;
 	
+	// Set customer information
+	
 	public void setCustomerName(String customerName){
 		this.customerName = customerName;
 	}
@@ -43,24 +45,33 @@ public class Bank_Account {
 		this.phoneNumber = phoneNumber;
 	}
 	
+	
+	// Get customer information
+	
+	
 	public String getCustomerName(){
-		System.out.println("Customer name is " +this.customerName);
+		System.out.println("Customer name is: " +this.customerName);
 		return this.customerName;
 	}
 	
+	public String getCustomerEmail(){
+		System.out.println("Customer email is: " +this.customerEmail);
+		return this.customerEmail;
+	}
+	
 	public int getAccountNumber(){
+		System.out.println("Customer account number is: " +this.accountNumber);
 		return this.accountNumber;
 	}
 	
 	public int getBalance(){
+		System.out.println("Accout balance is: " +this.balance);
 		return this.balance;
 	}
 	
-	public String getCustomerEmail(){
-		return this.customerEmail;
-	}
 	
-	public int phoneNumber(){
+	public int getPhoneNumber(){
+		System.out.println("Customer phone number is: "+this.phoneNumber);
 		return this.phoneNumber;
 	}
 

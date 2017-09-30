@@ -13,10 +13,10 @@ public class Main_Bank {
 		Customer.setPhoneNumber(123456);
 		
 		Customer.getCustomerName();
-		System.out.println("Customer email is: " + Customer.getCustomerEmail());
-		System.out.println("Customer phone number is: " + Customer.phoneNumber());
-		System.out.println("Account number is: " + Customer.getAccountNumber());
-		System.out.println("Account balance is: " + Customer.getBalance());
+		Customer.getCustomerEmail();
+		Customer.getPhoneNumber();
+		Customer.getAccountNumber();
+		Customer.getBalance();
 		
 		System.out.println("");
 		
