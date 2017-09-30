@@ -30,10 +30,10 @@ public class Bank_Account {
 	public void withdrawalBalance(int withdrawalBalance){
 		if(balance > withdrawalBalance){
 			this.balance -= withdrawalBalance;
-			System.out.println("Withdrawal of " +withdrawalBalance+ " made, new balance is "+balance);
+			System.out.println("Withdrawal of " +withdrawalBalance+ " made, new balance is "+balance+".");
 		}else {
 			System.out.println("Account balance is " + balance+ ", so withdrawal of "+withdrawalBalance+ 
-					" is not possible" );
+					" is not possible." );
 		}	
 	}
 	
