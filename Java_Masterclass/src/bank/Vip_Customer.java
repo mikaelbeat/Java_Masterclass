@@ -7,11 +7,11 @@ public class Vip_Customer {
 	private String emailAddress;
 	
 	public Vip_Customer() {
-		this("Default name", 10000, "Default email");
+		this("Default name", 10000, "default email address");
 	}
 	
 	public Vip_Customer(String name, double creditLimit){
-		this(name, creditLimit, "Default email");
+		this(name, creditLimit, "Default email address");
 	}
 	
 	public Vip_Customer(String name, double creditLimit, String emailAddress){
