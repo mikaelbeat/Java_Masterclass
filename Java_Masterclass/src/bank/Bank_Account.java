@@ -3,20 +3,29 @@ package bank;
 public class Bank_Account {
 	
 	private int accountNumber;
-	private int balance;
+	private double balance;
 	private String customerName;
 	private String customerEmail;
 	private int phoneNumber;
 	
-	// Set customer information
-	
-	public void setCustomerName(String customerName){
-		this.customerName = customerName;
+	public Bank_Account(){
+		this(123456, 0.00, "Customer Name", "Customer email", 000);
+		System.out.println("Empty constructor called!");
 	}
 	
-	public void setAccountNumber(int accountNumber){
+	public Bank_Account(int accountNumber, double balance, String customerName, String customerEmail, int phonenumber){
 		this.accountNumber = accountNumber;
+		this.balance = balance;
+		this.customerName = customerName;
+		this.customerEmail = customerEmail;
+		this.phoneNumber = phonenumber;
 	}
+	
+	public Bank_Account(String customerName,  String customerEmail, int phonenumber){
+		this(99999, 0.00, customerName, customerEmail, phonenumber);
+	}
+	
+	// Set customer information
 	
 	public void setBalance(int balance){
 		this.balance = balance;
@@ -28,21 +37,13 @@ public class Bank_Account {
 	}
 	
 	public void withdrawalBalance(int withdrawalBalance){
-		if(balance > withdrawalBalance){
+		if(balance >= withdrawalBalance){
 			this.balance -= withdrawalBalance;
 			System.out.println("Withdrawal of " +withdrawalBalance+ " made, new balance is "+balance+".");
 		}else {
 			System.out.println("Account balance is " + balance+ ", so withdrawal of "+withdrawalBalance+ 
 					" is not possible." );
 		}	
-	}
-	
-	public void setCustomerEmail(String email){
-		this.customerEmail = email;
-	}
-	
-	public  void setPhoneNumber(int phoneNumber){
-		this.phoneNumber = phoneNumber;
 	}
 	
 	
@@ -64,7 +65,7 @@ public class Bank_Account {
 		return this.accountNumber;
 	}
 	
-	public int getBalance(){
+	public double getBalance(){
 		System.out.println("Accout balance is: " +this.balance);
 		return this.balance;
 	}
