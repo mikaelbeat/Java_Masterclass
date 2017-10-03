@@ -1,7 +1,7 @@
 package inheritanceChallenge;
 
 public class Car extends Vehicle{
-	
+
 	private int wheels;
 	private int doors;
 	private int gears;
@@ -9,8 +9,7 @@ public class Car extends Vehicle{
 	
 	private int currentGear;
 	
-	
-	private Car(String name, String size, int wheels, int doors, int gears, boolean isManual){
+	protected Car(String name, String size, int wheels, int doors, int gears, boolean isManual){
 		super(name, size);
 		this.wheels = wheels;
 		this.doors = doors;
@@ -25,8 +24,8 @@ public class Car extends Vehicle{
 	}
 	
 	public void changeVelocity(int speed, int direction){
-		move(speed, direction);
 		System.out.println("Car.changeVelocity() : Velocity " + speed + " direction " + direction +".");
+		move(speed, direction);
 	}
 	
 	
