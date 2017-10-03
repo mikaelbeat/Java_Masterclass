@@ -7,13 +7,6 @@ public class MainCar {
 		Outlander outlander = new Outlander(36);
 		outlander.accelerate(30);
 		
-	
-		
-		
-		
-		
-
-
 	}
 
 }
