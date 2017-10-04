@@ -11,13 +11,12 @@ public class Play {
 	}
 	
 	public void gameOn(){
-		ps4.startPS4();
 		monitor.turnMonitorOn();
+		ps4.startPS4();
+		ps4.insertGameDisc();
+		
 	}
-	
-	private void useCheats(){
-		System.out.println("Cheats used!");
-	}
+
 	
 
 }

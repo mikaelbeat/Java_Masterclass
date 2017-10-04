@@ -16,6 +16,10 @@ public class PS4 {
 		System.out.println("PS4 started. 4K resolution looks good!");
 	}
 	
+	public void insertGameDisc(){
+		System.out.println("Game disc inserted to "+model+".");
+	}
+	
 	public String getModel(){
 		System.out.println("Console model is: "+model);
 		return model;

@@ -12,7 +12,5 @@ public class Game {
 		System.out.println("Game is: "+game);
 		return game;
 	}
-	
-
 
 }

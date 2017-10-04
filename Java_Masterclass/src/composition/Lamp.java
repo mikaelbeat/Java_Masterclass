@@ -1,0 +1,31 @@
+package composition;
+
+public class Lamp {
+	
+	private String style;
+	private boolean battery;
+	private int gloRating;
+	
+	public Lamp(String style, boolean battery, int gloRating){
+		this.style = style;
+		this.battery = battery;
+		this.gloRating = gloRating;
+	}
+	
+	public void turnOn(){
+		System.out.println("Lamp --> Turning on");
+	}
+	
+	public String getStyle(){
+		return style;
+	}
+	
+	public boolean getBattery(){
+		return battery;
+	}
+	
+	public int getGlorating(){
+		return gloRating;
+	}
+
+}
