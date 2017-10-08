@@ -2,12 +2,12 @@ package encapsulationChallenge;
 
 public class Printer {
 	
-	private String printerName = "HP SuperLaser 9000";
 	private int tonerLevel = 100;
 	private int pagesPrinted;
+	private String printerName;
 	
-	public Printer(String printerName, int tonerLevel, int pagesPrinted){
-		this.printerName = printerName;
+	public Printer(int tonerLevel, int pagesPrinted){
+		this.printerName = "HP SuperLaser 9000";
 		if(tonerLevel >0 && tonerLevel <= 100){
 			this.tonerLevel = tonerLevel;
 		}

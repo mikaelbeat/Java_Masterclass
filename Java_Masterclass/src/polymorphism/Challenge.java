@@ -2,13 +2,11 @@ package polymorphism;
 
 class Auto{
 	
-	private String name;
-	private int cylinders;
-	private int wheels;
+	protected String name;
+	protected int wheels;
 	
-	public Auto(int wheels){
-		this.name = "Default";
-		this.cylinders = 0;
+	public Auto(String name, int wheels){
+		this.name = name;
 		this.wheels = wheels;
 	}
 	
@@ -17,57 +15,82 @@ class Auto{
 		return name;
 	}
 	
-	public int getCylinders(){
-		System.out.println("Number of cylinders is: "+cylinders);
-		return cylinders;
-	}
-	
 	public int getWheels(){
-		System.out.println("Number of wheels is: "+wheels);
+		System.out.println("Number of wheels is: "+wheels+ " wheels.");
 		return wheels;
 	}
 
-	public void startEngine(){
-		System.out.println("Default engine started.");
+	public String startEngine(){
+		return "Default engine started.";
 	}
 }
 
-class Holden extends Auto{
+class Nissan extends Auto{
 
-	public Holden(int wheels) {
-		super(wheels);
-		
+	public Nissan(String name, int wheels) {
+		super(name, wheels);
 	}
-	
-	@Override
+
 	public String getName(){
-		System.out.println("Name is: Holden");
+		System.out.println("Name is Nissan "+name);
 		return name;
 	}
 	
+	public int getWheels(){
+		System.out.println("Car has "+wheels+" wheels.");
+		return wheels;
+	}
+
 	@Override
-	public void startEngine(){
-		System.out.println("Holden engine started.");
+	public String startEngine(){
+		return "Nissan engine started.";
 	}
 }
 
+class Toyota extends Auto{
+
+	public Toyota(String name, int wheels) {
+		super(name, wheels);
+	}
+
+	public String getName(){
+		System.out.println("Name is Toyota "+name);
+		return name;
+	}
+	
+	public int getWheels(){
+		System.out.println("Car has "+wheels+" wheels.");
+		return wheels;
+	}
+
+	@Override
+	public String startEngine(){
+		return "Toyota engine started.";
+	}
+}
 
 public class Challenge {
 	
 	public static void main(String[] args) {
 		
-		Auto car = new Auto(5);
+		Auto car = new Auto("Default", 5);
 		car.getName();
-		car.getCylinders();
 		car.getWheels();
+		System.out.println(car.startEngine());
 		
 		System.out.println("");
 		
-		Auto holden = new Auto(6);
-		holden.getName();
+		Nissan nissan = new Nissan("Cruiser", 9);
+		nissan.getName();
+		nissan.getWheels();
+		System.out.println(nissan.startEngine());
 		
+		System.out.println("");
 		
-		
+		Toyota toyota = new Toyota("Ninja", 4);
+		toyota.getName();
+		toyota.getWheels();
+		System.out.println(toyota.startEngine());
 	}
 
 }

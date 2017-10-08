@@ -102,7 +102,7 @@ public class Solution {
 		Ford ford = new Ford(1, "Falcon");
 		System.out.println(ford.startEngine());
 		System.out.println(ford.accelerate());
-		System.out.println(ford.brake());
+		System.out.println(ford.startEngine());
 
 	}
 

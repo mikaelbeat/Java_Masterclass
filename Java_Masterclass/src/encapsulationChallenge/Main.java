@@ -6,8 +6,9 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Printer printer = new Printer(null, 0, 0);
+		Printer printer = new Printer(0, 0);
 		
+		printer.getPrinterName();
 		printer.getTonerLevel();
 		printer.printOneSidedPages(50);
 		printer.getPagesPrinted();
