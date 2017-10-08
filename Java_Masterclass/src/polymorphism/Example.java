@@ -68,7 +68,7 @@ class Forgetable extends Movie{
 }
 
 
-public class Main {
+public class Example {
 
 	public static void main(String[] args) {
 		
