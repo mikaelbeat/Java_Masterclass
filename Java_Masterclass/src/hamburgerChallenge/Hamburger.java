@@ -1,45 +1,50 @@
 package hamburgerChallenge;
 
-class Hamburger{
+public class Hamburger {
 	
 	// Base hamburger
 	protected String breadType;
 	protected double basePrice = 0;
-	private String meatType;
+	protected String meatType;
 	
 	// Additions
 	protected boolean becon = false;
-	protected double beconPrice = 2.5;
+	protected double beconPrice = 3;
 	protected boolean tomato = false;
-	protected double tomatoPrice = 0.75;
+	protected double tomatoPrice = 2;
 	protected boolean hotSauce = false;
-	protected double hotSaucePrice = 1;
+	protected double hotSaucePrice = 1.5;
 	protected boolean lettuce = false;
 	protected double lettucePrice = 0.5;
-	
-	private double priceBase = 0;
+
 	protected double priceAdditions = 0;
 	
 	public Hamburger(String breadType, String meatType){
 		this.basePrice = 10;
-		System.out.println("----------Basic Hamburger order----------");
 		if(breadType == "wheat"){
+			System.out.println("----------Basic Hamburger order----------");
 			this.breadType = "wheat";
 			System.out.println(breadType+" bread selected.");
 		}else if(breadType == "full wheat"){
 			this.breadType = "full wheat";
+			System.out.println("----------Basic Hamburger order----------");
 			System.out.println(breadType+" bread selected.");
 		}
 		if(meatType == "meat"){
 			this.meatType = "meat";
 			System.out.println(meatType+" beef selected.");
+			System.out.println("Price for base Hamburger is: "+basePrice+"€");
+			System.out.println("----------End----------\n");
 		}else if(meatType == "veggie"){
 			this.meatType = "veggie";
 			System.out.println(meatType+" beef selected.");
+			System.out.println("Price for base Hamburger is: "+basePrice+"€");
+			System.out.println("----------End----------\n");
 		}
 	}
 	
 	public void buyAdditions(boolean becon, boolean tomato, boolean hotSauce, boolean lettuce){
+		System.out.println("----------Additions for Hamburger----------");
 		if(becon == true){
 			this.becon = true;
 			this.priceAdditions += beconPrice;
@@ -77,51 +82,7 @@ class Hamburger{
 		System.out.println("Price for hamburger with "+breadType+" bread and "+meatType+" beef is: "+total+"€");
 		System.out.println("Amount of additions from total price "+total+"€ was: "+priceAdditions+"€");
 		System.out.println("----------End----------");
+		System.out.println("");
 		return total;
 	}
-	
-}
-
-
-
-//if(tonerLevel >0 && print < tonerLevel){
-//	this.tonerLevel = this.tonerLevel-print;
-//	this.pagesPrinted += print;
-//	System.out.println("Printed "+print+" pages and toner level is at "+tonerLevel+"%");
-//}else if(print > tonerLevel){
-//	System.out.println("Toner level was at "+tonerLevel+" and tried to print "+print+" pages.");
-//}
-//}
-
-
-
-
-
-//class Auto{
-//	
-//	protected String name;
-//	protected int wheels;
-//	
-//	public Auto(String name, int wheels){
-//		this.name = name;
-//		this.wheels = wheels;
-//	}
-//	
-//	public String getName(){
-//		System.out.println("Name is: "+name);
-//		return name;
-//	}
-//	
-//	public int getWheels(){
-//		System.out.println("Number of wheels is: "+wheels+ " wheels.");
-//		return wheels;
-//	}
-//
-//	public String startEngine(){
-//		return "Default engine started.";
-//	}
-//}
-
-public class Hamburgers {
-
 }

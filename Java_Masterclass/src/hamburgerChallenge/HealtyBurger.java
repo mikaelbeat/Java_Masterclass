@@ -3,17 +3,26 @@ package hamburgerChallenge;
 public class HealtyBurger extends Hamburger{
 	
 	private boolean pineapple = false;
+	private double pineapplePrice = 2.5;
 	private boolean cheese = false;
-	private double pineapplePrice = 1;
-
-	public HealtyBurger(String breadType, String meatType) {
-		super(breadType, meatType);
-		// TODO Auto-generated constructor stub
-	}
+	private double cheesePrice = 2;
 	
-	@Override
-	public void buyAdditions(boolean becon, boolean tomato, boolean hotSauce, boolean lettuce) {
-		super.buyAdditions(becon, tomato, hotSauce, lettuce);
+	public HealtyBurger() {
+		super("brown rye", "healty");
+		this.breadType = "brown rye";
+		this.meatType = "healty";
+		this.basePrice = 15;
+		System.out.println("----------Healty Hamburger order----------");
+		System.out.println(breadType+" bread selected.");
+		System.out.println(meatType+" beef selected.");
+		System.out.println("Price for base Healty Burger is: "+basePrice+"€");	
+		System.out.println("----------End----------\n");
+	}
+
+	
+	public void buyAdditions(boolean becon, boolean tomato, boolean hotSauce, boolean lettuce, 
+			boolean pineapple, boolean cheese) {
+		System.out.println("----------Additions for Healty Burger----------");
 		if(becon == true){
 			this.becon = true;
 			this.priceAdditions += beconPrice;
@@ -46,9 +55,27 @@ public class HealtyBurger extends Hamburger{
 			this.pineapple = true;
 			this.priceAdditions += pineapplePrice;
 			System.out.println("pineapple added, price is: "+pineapplePrice+"€");
-			
+		}else if(pineapple == false){
+			this.pineapple = false;
+		}
+		if(cheese == true){
+			this.cheese = true;
+			this.priceAdditions += pineapplePrice;
+			System.out.println("cheese added, price is: "+cheesePrice+"€");
+		}else if(cheese == false){
+			this.cheese = false;
 		}
 		System.out.println("----------End----------\n");
+	}
+	
+	public double getPrice(){
+		double total = basePrice + priceAdditions;
+		System.out.println("----------Receipt----------");
+		System.out.println("Price for hamburger with "+breadType+" bread and "+meatType+" beef is: "+total+"€");
+		System.out.println("Amount of additions from total price "+total+"€ was: "+priceAdditions+"€");
+		System.out.println("----------End----------\n");
+		System.out.println("");
+		return total;
 	}
 
 }
