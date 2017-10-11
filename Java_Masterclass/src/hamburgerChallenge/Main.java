@@ -1,15 +1,6 @@
 package hamburgerChallenge;
 
-public class Main extends Hamburger{
-
-
-
-
-
-	public Main(String breadType, String meatType) {
-		super(breadType, meatType);
-		// TODO Auto-generated constructor stub
-	}
+public class Main{
 
 	public static void main(String[] args) {
 
@@ -17,11 +8,15 @@ public class Main extends Hamburger{
 		hamppari.buyAdditions(true, true, true, true);
 		hamppari.getPrice();
 		
+		System.out.println("======================================================================\n");
+		
 		HealtyBurger burgeri = new HealtyBurger();
 		burgeri.buyAdditions(true, true, true, true, true, true);
 		burgeri.getPrice();
 
-
+		System.out.println("======================================================================\n");
+		
+		DeluxeBurger deluxe = new DeluxeBurger();
 		
 	}
 

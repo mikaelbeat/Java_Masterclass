@@ -8,14 +8,14 @@ public class Hamburger {
 	protected String meatType;
 	
 	// Additions
-	protected boolean becon = false;
-	protected double beconPrice = 3;
+	protected boolean bacon = false;
+	protected double baconPrice = 2;
 	protected boolean tomato = false;
-	protected double tomatoPrice = 2;
+	protected double tomatoPrice = 1;
 	protected boolean hotSauce = false;
-	protected double hotSaucePrice = 1.5;
+	protected double hotSaucePrice = 0.5;
 	protected boolean lettuce = false;
-	protected double lettucePrice = 0.5;
+	protected double lettucePrice = 1;
 
 	protected double priceAdditions = 0;
 	
@@ -44,13 +44,13 @@ public class Hamburger {
 	}
 	
 	public void buyAdditions(boolean becon, boolean tomato, boolean hotSauce, boolean lettuce){
-		System.out.println("----------Additions for Hamburger----------");
+		System.out.println("----------Additions for Basic Hamburger----------");
 		if(becon == true){
-			this.becon = true;
-			this.priceAdditions += beconPrice;
-			System.out.println("becon added, price is: "+beconPrice+"€");
+			this.bacon = true;
+			this.priceAdditions += baconPrice;
+			System.out.println("bacon added, price is: "+baconPrice+"€");
 		}else if(becon == false){
-			this.becon = false;
+			this.bacon = false;
 		}
 		if(tomato == true){
 			this.tomato = true;

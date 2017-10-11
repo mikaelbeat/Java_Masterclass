@@ -5,7 +5,7 @@ public class HealtyBurger extends Hamburger{
 	private boolean pineapple = false;
 	private double pineapplePrice = 2.5;
 	private boolean cheese = false;
-	private double cheesePrice = 2;
+	private double cheesePrice = 1.5;
 	
 	public HealtyBurger() {
 		super("brown rye", "healty");
@@ -19,16 +19,15 @@ public class HealtyBurger extends Hamburger{
 		System.out.println("----------End----------\n");
 	}
 
-	
 	public void buyAdditions(boolean becon, boolean tomato, boolean hotSauce, boolean lettuce, 
 			boolean pineapple, boolean cheese) {
 		System.out.println("----------Additions for Healty Burger----------");
 		if(becon == true){
-			this.becon = true;
-			this.priceAdditions += beconPrice;
-			System.out.println("becon added, price is: "+beconPrice+"€");
-		}else if(becon == false){
-			this.becon = false;
+			this.bacon = true;
+			this.priceAdditions += baconPrice;
+			System.out.println("bacon added, price is: "+baconPrice+"€");
+		}else if(bacon == false){
+			this.bacon = false;
 		}
 		if(tomato == true){
 			this.tomato = true;
@@ -60,7 +59,7 @@ public class HealtyBurger extends Hamburger{
 		}
 		if(cheese == true){
 			this.cheese = true;
-			this.priceAdditions += pineapplePrice;
+			this.priceAdditions += cheesePrice;
 			System.out.println("cheese added, price is: "+cheesePrice+"€");
 		}else if(cheese == false){
 			this.cheese = false;
