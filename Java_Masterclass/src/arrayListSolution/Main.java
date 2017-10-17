@@ -117,9 +117,6 @@ public class Main {
 						   "5 - query if an existing contact exists\n"+
 						   "6 - to print a list of available actions");
 		System.out.print("Choose your action: ");
-				
-				
-	
 	}
 
 }
