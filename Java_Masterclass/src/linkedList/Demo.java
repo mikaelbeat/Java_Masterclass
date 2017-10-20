@@ -61,7 +61,6 @@ public class Demo {
 	private static void visit(LinkedList cities){
 		Scanner scanner = new Scanner(System.in);
 		boolean quit = false;
-		boolean qoingForward = true;
 		boolean goingForward = true;
 		ListIterator<String> listIterator = cities.listIterator();
 		
@@ -85,7 +84,7 @@ public class Demo {
 					if(listIterator.hasNext()){
 						listIterator.next();
 					}
-					qoingForward = true;
+					goingForward = true;
 				}
 				if(listIterator.hasNext()){
 					System.out.println("Now visiting: "+listIterator.next());
