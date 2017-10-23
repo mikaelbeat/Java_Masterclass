@@ -8,6 +8,7 @@ public class Main {
 		timsPhone = new DeskPhone(123456);
 		timsPhone.powerOn();
 		timsPhone.callPhone(123456);
+		timsPhone.dial(123456);
 		timsPhone.answer();
 		
 		System.out.println("");
