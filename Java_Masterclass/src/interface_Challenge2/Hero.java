@@ -12,18 +12,26 @@ public class Hero implements ICharacter{
 	private boolean isLoaded = false;
 	private boolean isResponding;
 	
-	public Hero(String name, int strenght){
+	public Hero(String name, int strenght, int level){
 		this.name = name;
 		this.strenght = strenght;
-		this.level = 1;
-		heroes.add(this.name+this.strenght+this.level);
+		this.level = level;
+		heroes.add(this.name+" strenght: "+this.strenght+", level: "+this.level);
 	}
 	
 	public static void getHeroes(){
+		System.out.println("");
+		System.out.println("----------All heroes in the game----------");
 		for(int i=0; i<heroes.size(); i++){
 			System.out.println("Hero number "+(1+i)+" is "+heroes.get(i)+".");
 		}
 	}
+	
+//	public static void getHeroes(){
+//		for(int i=0; i<heroes.size(); i++){
+//			System.out.println("Hero number "+(1+i)+" is "+heroes.get(i)+".");
+//		}
+//	}
 	
 	@Override
 	public String toString(){
@@ -63,7 +71,7 @@ public class Hero implements ICharacter{
 	public boolean callCharacter(String hero) {
 		if(isLoaded){
 			if(hero == name){
-				System.out.println("Hero named "+name+" responded.");
+				System.out.println("Hero "+name+" responded.");
 			}else{
 				System.out.println("No heroes with such name.");
 			}

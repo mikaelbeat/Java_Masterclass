@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		ICharacter character;
-		character = new Hero("White Knight", 85);
+		character = new Hero("White Knight", 66, 12);
 		character.Loaded();
 		character.Action("training");
 		character.LevelUp(5);
@@ -18,7 +18,7 @@ public class Main {
 		
 		System.out.println("");
 		
-		character = new Hero("Forest Wizard", 23);
+		character = new Hero("Forest Wizard", 23, 5);
 		character.Loaded();
 		character.Action("drinking coffee");
 		character.LevelUp(2);
@@ -28,7 +28,7 @@ public class Main {
 
 		System.out.println("");
 		
-		character = new Monster("Ogre", 45);
+		character = new Monster("Ogre", 45, 3);
 		character.Loaded();
 		character.Action("killing");
 		character.LevelUp(56);
@@ -38,7 +38,7 @@ public class Main {
 		
 		System.out.println("");
 		
-		character = new Monster("Giant Spider", 70);
+		character = new Monster("Giant Spider", 70, 77);
 		character.Loaded();
 		character.Action("Sleeping");
 		character.LevelUp(77);

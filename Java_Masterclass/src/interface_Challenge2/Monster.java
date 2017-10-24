@@ -12,16 +12,18 @@ public class Monster implements ICharacter{
 	private boolean isLoaded = false;
 	private boolean isResponding;
 	
-	public Monster(String name, int strenght){
+	public Monster(String name, int strenght, int level){
 		this.name = name;
 		this.strenght = strenght;
-		this.level = 1;
-		monsters.add(this.name+this.strenght+this.level);
+		this.level = level;
+		monsters.add(this.name+" strenght: "+this.strenght+", level: "+this.level);
 	}
 	
 	public static void getMonsters(){
+		System.out.println("");
+		System.out.println("----------All monsters in the game----------");
 		for(int i=0; i<monsters.size(); i++){
-			System.out.println("Monster number "+(1+i)+" named "+monsters.get(i)+".");
+			System.out.println("Monster number "+(1+i)+" is "+monsters.get(i)+".");
 		}
 	}
 	
@@ -63,7 +65,7 @@ public class Monster implements ICharacter{
 	public boolean callCharacter(String monster) {
 		if(isLoaded){
 			if(monster == name){
-				System.out.println("Monster named "+name+" responded.");
+				System.out.println("Monster "+name+" responded.");
 			}else{
 				System.out.println("No monsters with such name.");
 			}
