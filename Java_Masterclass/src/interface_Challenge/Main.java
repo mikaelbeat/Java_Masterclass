@@ -33,17 +33,37 @@ public class Main {
 				removeHero();
 				break;
 			case 5:
-				addMonster();
+//				addMonster();
 				break;
 			case 6:
-				viewMosters();
+//				viewMosters();
 				break;
 			case 7:
-				removeMonster();
+//				removeMonster();
 				break;
 			}
 		}
 
+	}
+	
+	public static void loadApplication(){
+	//	Hero.Loaded();
+	}
+	
+	public static void addHero(){
+		System.out.println("Enter name of the hero: ");
+		String name = scanner.nextLine();
+		Hero.addHero(name);
+	}
+	
+	public static void viewHeroes(){
+		Hero.getHeroes();
+	}
+	
+	public static void removeHero(){
+		System.out.println("Enter name of the hero to be removed: ");
+		String name = scanner.nextLine();
+		Hero.removeHero(name);
 	}
 
 	private static void menu() {
@@ -52,7 +72,7 @@ public class Main {
 				           "1 - to view menu.\n" + 
 						   "2 - to add heroes.\n"+ 
 				           "3 - to view heroes.\n" + 
-						   "4 - to add monsters.\n" + 
+						   "4 - to remove hero.\n" + 
 				           "5 - to view monsters.\n");
 	}
 
