@@ -9,8 +9,7 @@ public class Hero implements ICharacter{
 	private String name;
 	private int strenght;
 	private int level;
-	private boolean isLoaded = false;
-	private boolean isResponding;
+	private static boolean isLoaded = false;
 	
 	public Hero(String name, int strenght, int level){
 		this.name = name;
@@ -20,30 +19,28 @@ public class Hero implements ICharacter{
 	}
 	
 	public static void getHeroes(){
-		System.out.println("");
-		System.out.println("----------All heroes in the game----------");
-		for(int i=0; i<heroes.size(); i++){
-			System.out.println("Hero number "+(1+i)+" is "+heroes.get(i)+".");
-		}
+			System.out.println("");
+			System.out.println("----------All heroes in the game----------");
+			for(int i=0; i<heroes.size(); i++){
+				System.out.println("Hero number "+(1+i)+" is "+heroes.get(i)+".");
+			}
 	}
-	
-//	public static void getHeroes(){
-//		for(int i=0; i<heroes.size(); i++){
-//			System.out.println("Hero number "+(1+i)+" is "+heroes.get(i)+".");
-//		}
-//	}
 	
 	@Override
 	public String toString(){
-		System.out.println("Hero "+name+" has strenght of "+strenght+" and is at level "+level+".");
-		return this.name +": "+ this.strenght+": "+this.level;
+		if(isLoaded){
+			System.out.println("Hero "+name+" has strenght of "+strenght+" and is at level "+level+".");
+			return this.name +": "+ this.strenght+": "+this.level;	
+		}else{
+			System.out.println("Hero is not loaded, cannot get hero details.");
+			return null;
+		}
 	}
 	
 	@Override
 	public void Loaded() {
 		isLoaded = true;
 		System.out.println("Hero "+name+" is loaded.");
-		
 	}
 
 	@Override
@@ -51,9 +48,8 @@ public class Hero implements ICharacter{
 		if(isLoaded){
 			System.out.println("Hero "+name+" is now "+action+".");
 		}else{
-			System.out.println("Game is not loaded yet.");
+			System.out.println("Hero is not loaded, cannot do any actions.");
 		}
-		
 	}
 
 	@Override
@@ -62,9 +58,8 @@ public class Hero implements ICharacter{
 			this.level = newLevel;
 			System.out.println("Hero "+name+" is now at level "+level+".");
 		}else{
-			System.out.println("Game is not loaded yet, cannot level up.");
+			System.out.println("Hero is not loaded, cannot level up.");
 		}
-		
 	}
 
 	@Override
@@ -76,15 +71,8 @@ public class Hero implements ICharacter{
 				System.out.println("No heroes with such name.");
 			}
 		}else{
-			System.out.println("Game is not loaded yet, heroes cannot be called.");
+			System.out.println("Hero is not loaded, hero cannot respond.");
 		}
 		return false;
 	}
-
-	@Override
-	public boolean characterResponding() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }

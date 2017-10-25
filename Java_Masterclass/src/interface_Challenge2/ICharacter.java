@@ -7,6 +7,5 @@ public interface ICharacter {
 	void LevelUp(int newLevel);
 	
 	boolean callCharacter(String name);
-	boolean characterResponding();
 
 }

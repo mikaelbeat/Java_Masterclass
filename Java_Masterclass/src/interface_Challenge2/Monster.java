@@ -9,8 +9,7 @@ public class Monster implements ICharacter{
 	private String name;
 	private int strenght;
 	private int level;
-	private boolean isLoaded = false;
-	private boolean isResponding;
+	private static boolean isLoaded = false;
 	
 	public Monster(String name, int strenght, int level){
 		this.name = name;
@@ -20,24 +19,28 @@ public class Monster implements ICharacter{
 	}
 	
 	public static void getMonsters(){
-		System.out.println("");
-		System.out.println("----------All monsters in the game----------");
-		for(int i=0; i<monsters.size(); i++){
-			System.out.println("Monster number "+(1+i)+" is "+monsters.get(i)+".");
-		}
+			System.out.println("");
+			System.out.println("----------All monsters in the game----------");
+			for(int i=0; i<monsters.size(); i++){
+				System.out.println("Monster number "+(1+i)+" is "+monsters.get(i)+".");
+			}
 	}
 	
 	@Override
 	public String toString(){
-		System.out.println("Monster "+name+" has strenght of "+strenght+" and is at level "+level+".");
-		return this.name +": "+ this.strenght+": "+this.level;
+		if(isLoaded){
+			System.out.println("Monster "+name+" has strenght of "+strenght+" and is at level "+level+".");
+			return this.name +": "+ this.strenght+": "+this.level;
+		}else{
+			System.out.println("Monster is not loaded, cannot get monster details.");
+			return null;
+		}
 	}
 	
 	@Override
 	public void Loaded() {
 		isLoaded = true;
 		System.out.println("Monster "+name+" is loaded.");
-		
 	}
 
 	@Override
@@ -45,9 +48,8 @@ public class Monster implements ICharacter{
 		if(isLoaded){
 			System.out.println("Monster "+name+" is now "+action+".");
 		}else{
-			System.out.println("Game is not loaded yet.");
+			System.out.println("Monster is not loaded, cannot do any actions.");
 		}
-		
 	}
 
 	@Override
@@ -56,9 +58,8 @@ public class Monster implements ICharacter{
 			this.level = newLevel;
 			System.out.println("Monster "+name+" is now at level "+level+".");
 		}else{
-			System.out.println("Game is not loaded yet, cannot level up.");
+			System.out.println("Monster is not loaded, cannot level up.");
 		}
-		
 	}
 
 	@Override
@@ -70,15 +71,8 @@ public class Monster implements ICharacter{
 				System.out.println("No monsters with such name.");
 			}
 		}else{
-			System.out.println("Game is not loaded yet, monsters cannot be called.");
+			System.out.println("Monster is not loaded, monster cannot respond.");
 		}
 		return false;
 	}
-
-	@Override
-	public boolean characterResponding() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }

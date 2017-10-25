@@ -1,8 +1,5 @@
 package interface_Challenge2;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,7 +8,7 @@ public class Main {
 		character = new Hero("White Knight", 66, 12);
 		character.Loaded();
 		character.Action("training");
-		character.LevelUp(5);
+		character.LevelUp(77);
 		character.callCharacter("White Knight");
 		character.toString();
 		Hero.getHeroes();
@@ -38,7 +35,7 @@ public class Main {
 		
 		System.out.println("");
 		
-		character = new Monster("Giant Spider", 70, 77);
+		character = new Monster("Giant Spider", 70, 44);
 		character.Loaded();
 		character.Action("Sleeping");
 		character.LevelUp(77);
@@ -46,8 +43,4 @@ public class Main {
 		character.toString();
 		Monster.getMonsters();
 	}
-	
-	
-	
-
 }
