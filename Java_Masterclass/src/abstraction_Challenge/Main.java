@@ -18,7 +18,7 @@ public class Main {
 		
 		System.out.println("");
 		
-		WhiteMage whiteMage = new WhiteMage("Human", "Gandalf");
+		WhiteMage whiteMage = new WhiteMage("Gandalf", "Human");
 		whiteMage.move();
 		whiteMage.heal();
 		whiteMage.fireball();
