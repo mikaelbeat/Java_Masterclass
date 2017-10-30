@@ -45,7 +45,8 @@ public class Test {
 				removeMovie();
 				break;
 			case 8:
-				
+				testFunctions.allNames();
+				break;
 			}
 		}
 	}
@@ -60,7 +61,8 @@ public class Test {
 				+ "===== Linked list actions =====\n"
 				+ "5 - list of movies to watch\n"
 				+ "6 - add movie to list\n"
-				+ "7 - remove movie\n");
+				+ "7 - remove movie\n"
+				+ "8 - all names using method without for loop.");
 	}
 
 	public static void addNames() {

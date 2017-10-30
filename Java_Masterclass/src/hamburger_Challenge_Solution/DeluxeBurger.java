@@ -1,4 +1,4 @@
-package hamburger_Solution;
+package hamburger_Challenge_Solution;
 
 public class DeluxeBurger extends Hamburger{
 

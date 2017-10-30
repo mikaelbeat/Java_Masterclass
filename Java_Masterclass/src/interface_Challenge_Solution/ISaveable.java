@@ -1,4 +1,4 @@
-package interface_Solution;
+package interface_Challenge_Solution;
 
 import java.util.List;
 

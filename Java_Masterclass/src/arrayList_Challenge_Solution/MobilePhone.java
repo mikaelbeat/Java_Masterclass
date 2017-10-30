@@ -1,4 +1,4 @@
-package arrayList_Solution;
+package arrayList_Challenge_Solution;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package encapsulation_Solution;
+package encapsulation_Challenge_Solution;
 
 public class Printer {
 

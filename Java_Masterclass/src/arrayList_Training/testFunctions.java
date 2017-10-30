@@ -14,6 +14,12 @@ public class testFunctions {
 		this.movies = new LinkedList(movies);
 	}
 	
+	public static void allNames(){
+		for(String  i : names){
+			System.out.println(i);
+		}
+	}
+	
 	public static void addNames(){
 		names.add("Dog");
 		names.add("Cat");

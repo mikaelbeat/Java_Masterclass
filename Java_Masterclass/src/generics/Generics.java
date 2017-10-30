@@ -2,7 +2,7 @@ package generics;
 
 import java.util.ArrayList;
 
-public class Main {
+public class Generics {
 
 	public static void main(String[] args) {
 
@@ -18,10 +18,8 @@ public class Main {
 	}
 	
 	private static void printDoubled(ArrayList<Integer> n){
-		for(Object i : n){
-			System.out.println((Integer) i * 2);
+		for(int  i : n){
+			System.out.println(i * 2);
 		}
 	}
 }
-
-// 9:18
