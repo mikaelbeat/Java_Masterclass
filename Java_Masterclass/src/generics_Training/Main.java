@@ -1,30 +1,29 @@
-package generics_Challenge_Solution;
+package generics_Training;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
 		// Add league
-		League<Team<FootballPlayer>> footballLeague = new League<>("AFL");
+		League<Team<FootballTeam>> footballLeague = new League<>("AFL");
+		System.out.println("===================================");
 		
 		// Add teams
-		Team<FootballPlayer> adelaideCrows = new Team<>("Adelaide Crows");
-		Team<FootballPlayer> melbourne = new Team<>("Melbourne");
-		Team<FootballPlayer> hawthorn = new Team<>("Hawthorn");
-		Team<FootballPlayer> fremantle = new Team<>("Fremantle");
+		Team<FootballTeam> adelaideCrows = new Team<>("Adelaide Crows");
+		Team<FootballTeam> melbourne = new Team<>("Melbourne");
+		Team<FootballTeam> hawthorn = new Team<>("Hawthorn");
+		Team<FootballTeam> fremantle = new Team<>("Fremantle");
 		
-		Team<BaseballPlayer> baseballTeam = new Team<>("Chicago Cubs");
+		Team<BaseballTeam> baseballTeam = new Team<>("Chicago Cubs");
 		
 		// Adding teams to league
 		footballLeague.add(adelaideCrows);
 		footballLeague.add(melbourne);
 		footballLeague.add(hawthorn);
 		footballLeague.add(fremantle);
+		System.out.println("===================================");
 		
 //		footballLeague.add(baseballTeam);
-		
-		System.out.println();
-		System.out.println("===================================");
 		footballLeague.showLeagueTable();
 		System.out.println("===================================");
 		hawthorn.matchResult(fremantle, 1, 0);

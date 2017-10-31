@@ -1,4 +1,4 @@
-package arrayList_Training;
+package array_List_Training;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
