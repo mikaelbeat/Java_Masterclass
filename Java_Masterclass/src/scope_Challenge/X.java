@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class X {
 	
-	private  Scanner scanner = new Scanner(System.in);
+	private Scanner scanner = new Scanner(System.in);
 	
-	private  ArrayList<Integer> x = new ArrayList<Integer>();
+	private ArrayList<Integer> x = new ArrayList<Integer>();
 	
 	X(){
-		this.x = new ArrayList(x);
+		this.x = new ArrayList<Integer>();
 	}
 	
 	public void x(){
