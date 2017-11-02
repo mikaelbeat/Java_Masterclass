@@ -12,7 +12,7 @@ public class Main {
 		System.out.println(two.getInstanceNumber());
 		System.out.println(three.getInstanceNumber());
 		
-		System.out.println("=================================");
+		System.out.println("=================================\n");
 		
 		int pw = 674312;
 		Password password = new Password(pw);
@@ -20,8 +20,13 @@ public class Main {
 		password.letMeIn(1);
 		password.letMeIn(323223);
 		password.letMeIn(674312);
+		System.out.println("=================================\n");
 		
-		// Tsekkaa t‰‰ viel‰ l‰pi kokonaan
+		System.out.println("Main method called.");
+		SIBTest test = new SIBTest();
+		test.someMethod();
+		System.out.println("Owner is "+SIBTest.owner);
+		
 
 	}
 
