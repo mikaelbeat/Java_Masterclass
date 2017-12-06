@@ -9,9 +9,10 @@ public class Main {
 		
 //		int x = 98;
 //		int y = 0;
-//		System.out.println(divideBYL(x, y));
+//		System.out.println(divideLBYL(x, y));
 //		System.out.println(divideEAFP(x, y));
 //		System.out.println(divide(x,y));
+//		int x = getIntLBYL()();
 		int x = getIntEAFP();
 		System.out.println("x is "+x);
 		
@@ -22,7 +23,7 @@ public class Main {
 		return s.nextInt();
 	}
 	
-	private static int getIntBYL() {
+	private static int getIntLBYL() {
 		Scanner s = new Scanner(System.in);
 		boolean isValid = true;
 		System.out.print("Enter number: ");
@@ -45,11 +46,12 @@ public class Main {
 		try {
 			return s.nextInt();
 		}catch(InputMismatchException e) {
+			System.out.println("Number not given.");
 			return 0;
 		}
 	}
 	
-	private static int divideBYL(int x, int y) {
+	private static int divideLBYL(int x, int y) {
 		if(y != 0) {
 			return x / y;
 		}else {
