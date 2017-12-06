@@ -4,8 +4,6 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
-
 public class Example {
 
 	public static void main(String[] args) {
