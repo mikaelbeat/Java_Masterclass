@@ -8,30 +8,30 @@ public class Example {
 
 	public static void main(String[] args) {
 		
-		int result = divide();
-		System.out.println(result);
+		try {
+			int result = divide();
+			System.out.println(result);
+		}catch(ArithmeticException | NoSuchElementException e) {
+			System.out.println(e.toString());
+			System.out.println("Unable to perform division, autopilot shutting down.");
+		}
+
 
 	}
 	
 	private static int divide() {
 		int x,y;
-		try {
+//		try {
 			x = getInt();
 			y = getInt();
-		}catch(NoSuchElementException e) {
-			throw new ArithmeticException("No suitable input.");
-		}
-		System.out.println("x is "+x+" and y is "+y+".");
-		try {
+			System.out.println("x is "+x+" and y is "+y+".");
 			int result = x / y;
-			System.out.print("Result is: ");
 			return result;
-		}catch(ArithmeticException e){
-			throw new ArithmeticException("Attempt to divide by zero.");
-			
-		}
-
-		
+//		}catch(NoSuchElementException e) {
+//			throw new ArithmeticException("No suitable input.");
+//		} catch(ArithmeticException e) {
+//			throw new ArithmeticException("Attempt to divide by zero.");
+//		}		
 	}
 	
 	private static int getInt() {
