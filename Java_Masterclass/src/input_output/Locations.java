@@ -31,7 +31,7 @@ public class Locations implements Map<Integer, Location>{
 				}
 			}
 		}
-	}
+	}kissa
 
 	static {
 		try (Scanner scanner = new Scanner(new BufferedReader(new FileReader("locations_big.txt")))){
