@@ -39,7 +39,7 @@ public class Locations implements Map<Integer, Location>{
         }
     }
 		
-// Writin locations to txt file	
+// Writing locations to txt file	
 //		try(BufferedWriter locFile = new BufferedWriter(new FileWriter("locations.txt"));
 //			BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))){
 //			for(Location location : locations.values()) {
