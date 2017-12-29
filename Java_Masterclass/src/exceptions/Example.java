@@ -15,7 +15,6 @@ public class Example {
 			System.out.println(e.toString());
 			System.out.println("Unable to perform division, autopilot shutting down.");
 		}
-moi
 
 	}
 	
