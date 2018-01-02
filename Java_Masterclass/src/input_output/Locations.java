@@ -57,7 +57,7 @@ public class Locations implements Map<Integer, Location>{
 //		}
 
 	static {
-		
+		// TSEKKAA LÄPI MITÄ TÄÄ TEKEE
 		try(DataInputStream locFile = new DataInputStream(new BufferedInputStream(new FileInputStream("locations.dat")))){
 			boolean eof = false;
 			while(!eof) {
