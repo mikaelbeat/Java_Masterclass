@@ -9,17 +9,15 @@ public class PizzaMain {
 	public static void main(String[] args) {
 		
 		boolean quit = false;
-		int choise = 0;
+		int choice = 0;
 		viewPizzaMenu();
 		
 		while(!quit) {
-			System.out.println("");
-			System.out.println("*** Pizza order ***");
 			choice = reader.nextInt();
 			reader.nextLine();
 			System.out.println("");
 			
-			switch(choise) {
+			switch(choice) {
 			case 0:
 				viewPizzaMenu();
 				break;
@@ -37,13 +35,50 @@ public class PizzaMain {
 				break;
 			case 5:
 				chooseOregano();
-				break
+				break;
 			case 6:
 				sendOrder();
 			}
 		}
-		
-
 	}
+	
+	public static void viewPizzaMenu() {
+		System.out.println("");
+		System.out.println("0 - Menu.\n"+
+						   "1 - Choose pizza size.\n"+
+						   "2 - Choose topping 1.\n"+
+						   "3 - Choose topping 2.\n"+
+						   "4 - Choose topping 3.\n"+
+						   "5 - Choose oregano.\n"+
+						   "6 - Send order.");
+	}
+	
+	public static void choosePizzaSize() {
+		PizzaOrder.selectPizzaSize();
+		System.out.println("");
+		viewPizzaMenu();
+	}
+	
+	public static void chooseTopping1() {
+		PizzaOrder.selectTopping1();
+	}
+	
+	public static void chooseTopping2() {
+		PizzaOrder.selectTopping2();
+	}
+	
+	public static void chooseTopping3() {
+		PizzaOrder.selectTopping3();
+	}
+	
+	public static void chooseOregano() {
+		PizzaOrder.selectOregano();
+	}
+	
+	public static void sendOrder() {
+		PizzaOrder.orderPizza();
+	}
+	
+	
 
 }
