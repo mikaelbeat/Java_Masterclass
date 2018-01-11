@@ -38,6 +38,9 @@ public class PizzaMain {
 				break;
 			case 6:
 				sendOrder();
+				break;
+			case 7:
+				checkPrice();
 			}
 		}
 	}
@@ -50,7 +53,8 @@ public class PizzaMain {
 						   "3 - Choose topping 2.\n"+
 						   "4 - Choose topping 3.\n"+
 						   "5 - Choose oregano.\n"+
-						   "6 - Send order.");
+						   "6 - Send order.\n"+
+						   "7 - Check pizza price.");
 	}
 	
 	public static void choosePizzaSize() {
@@ -61,22 +65,32 @@ public class PizzaMain {
 	
 	public static void chooseTopping1() {
 		PizzaOrder.selectTopping1();
+		viewPizzaMenu();
 	}
 	
 	public static void chooseTopping2() {
 		PizzaOrder.selectTopping2();
+		viewPizzaMenu();
 	}
 	
 	public static void chooseTopping3() {
 		PizzaOrder.selectTopping3();
+		viewPizzaMenu();
 	}
 	
 	public static void chooseOregano() {
 		PizzaOrder.selectOregano();
+		viewPizzaMenu();
 	}
 	
 	public static void sendOrder() {
 		PizzaOrder.orderPizza();
+		viewPizzaMenu();
+	}
+	
+	public static void checkPrice() {
+		PizzaOrder.getPizzaPrice();
+		viewPizzaMenu();
 	}
 	
 	

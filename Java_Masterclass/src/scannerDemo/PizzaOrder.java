@@ -13,7 +13,7 @@ public class PizzaOrder {
 	protected static double topping1Price;
 	protected static double topping2Price;
 	protected static double topping3Price;
-	protected boolean oregano;
+	protected static boolean oregano;
 	protected static double pizzaPrice;
 	
 	public PizzaOrder(String pizzaSize, String topping1, String topping2, String topping3, boolean oregano){
@@ -31,9 +31,11 @@ public class PizzaOrder {
 		String size = reader.nextLine();
 		pizzaSize = size;
 		System.out.print("Selected pizza size: "+size);
-		if(size == "normal") {
+		if(pizzaSize == "normal") {
 			pizzaPrice+=6;
-		}else pizzaPrice+=12;
+		}else if(pizzaSize =="large") {
+			pizzaPrice+=12;
+		}
 	}
 	
 	public static void selectTopping1() {
@@ -42,7 +44,7 @@ public class PizzaOrder {
 		topping1 = input;
 		System.out.print("Selected "+input+" as first topping.");
 		if(input != null) {
-			topping1Price = 2.5;
+			topping1Price = 1.0;
 		}else topping1Price = 0;
 	}
 	
@@ -52,7 +54,7 @@ public class PizzaOrder {
 		topping2 = input;
 		System.out.print("Selected "+input+" as second topping.");
 		if(input != null) {
-			topping2Price = 2.5;
+			topping2Price = 1.5;
 		}else topping2Price = 0;
 	}
 	
@@ -62,12 +64,21 @@ public class PizzaOrder {
 		topping3 = input;
 		System.out.println("Selected "+input+" as third topping.");
 		if(input != null) {
-			topping3Price = 2.5;
+			topping3Price = 2.0;
 		}else topping3Price = 0;
 	}
 	
 	public static void selectOregano() {
-		
+		System.out.println("Do you want oregano in your pizza?");
+		System.out.print("Yes or no: ");
+		String input = reader.nextLine();
+		if(input == "yes"){
+			oregano = true;
+			System.out.println("You chosed to add oregano to pizza.");
+		}else {
+			oregano = false;
+			System.out.println("You chosed not to add oregano to pizza.");
+		}
 	}
 	
 	public static void orderPizza() {
@@ -75,10 +86,9 @@ public class PizzaOrder {
 	}
 	
 	public static double getPizzaPrice() {
-		
-		
-		
-		return pizzaPrice;
+		double fullPrice = topping1Price + topping2Price + topping3Price + pizzaPrice;
+		System.out.println("Full price for the pizza is: "+fullPrice);
+		return fullPrice;
 		
 	}
 
