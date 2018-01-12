@@ -7,65 +7,85 @@ public class PizzaOrder {
 	static Scanner reader = new Scanner(System.in);
 	
 	protected static String pizzaSize;
-	protected static String topping1;
-	protected static String topping2;
-	protected static String topping3;
-	protected static double topping1Price;
-	protected static double topping2Price;
-	protected static double topping3Price;
+	protected static String Extracheese;
+	protected static String salami;
+	protected static String special;
+	protected static double cheesePrice;
+	protected static double salamiPrice;
+	protected static double specialPrice;
 	protected static boolean oregano;
-	protected static double pizzaPrice;
-	
-	public PizzaOrder(String pizzaSize, String topping1, String topping2, String topping3, boolean oregano){
-		this.pizzaSize = "Normal";
-		this.topping1 = null;
-		this.topping2 = null;
-		this.topping3 = null;
-		this.oregano = false;
-		this.pizzaPrice = 0.0;
-	}
+	protected static double basePizza;
 	
 	public static void selectPizzaSize() {
+		pizzaSize = null;
+		basePizza = 0.0;
 		System.out.println("Available pizza sizes are normal and large.");
 		System.out.print("Enter pizza size: ");
 		String size = reader.nextLine();
 		pizzaSize = size;
-		System.out.print("Selected pizza size: "+size);
-		if(pizzaSize == "normal") {
-			pizzaPrice+=6;
-		}else if(pizzaSize =="large") {
-			pizzaPrice+=12;
+		System.out.println("Selected pizza size: "+size);
+		if(pizzaSize.equals("normal")) {
+			basePizza += 6.0;
+			System.out.println("Pizza price is: "+basePizza);
+		}else if(pizzaSize.equals("large")) {
+			basePizza += 12.0;
+			System.out.println("Pizza price is: "+basePizza);
+		}else {
+			System.out.println("Select normal or large size for the pizza.");
 		}
 	}
 	
-	public static void selectTopping1() {
-		System.out.print("Enter first topping: ");
+	public static void extraCheese() {
+		cheesePrice = 0.0;
+		System.out.print("Do you want to add extra cheese to your pizza, yes or no? ");
 		String input = reader.nextLine();
-		topping1 = input;
-		System.out.print("Selected "+input+" as first topping.");
-		if(input != null) {
-			topping1Price = 1.0;
-		}else topping1Price = 0;
+		Extracheese = input;
+		System.out.println("");
+		if(input.equals("yes")) {
+			cheesePrice = 1.0;
+			System.out.println("Added extra cheese to pizza.");
+		}else if(input.equals("no")){
+			cheesePrice = 0.0;
+			System.out.println("Decided not to add extra cheese to pizza.");
+		}else {
+			System.out.println("Removed extra cheese from pizza");
+			cheesePrice = 0.0;
+		}
 	}
 	
-	public static void selectTopping2() {
-		System.out.print("Enter second topping: ");
+	public static void addSalami() {
+		salamiPrice = 0.0;
+		System.out.print("Do you want to add salami to your pizza, yes or no? ");
 		String input = reader.nextLine();
-		topping2 = input;
-		System.out.print("Selected "+input+" as second topping.");
-		if(input != null) {
-			topping2Price = 1.5;
-		}else topping2Price = 0;
+		System.out.println("");
+		if(input.equals("yes")) {
+			salamiPrice = 1.5;
+			System.out.println("Added salami to pizza.");
+		}else if(input.equals("no")){
+			salamiPrice = 0.0;
+			System.out.println("Decided not to add salami to pizza.");
+		}else {
+			System.out.println("Removed salami from pizza");
+			salamiPrice = 0.0;
+	}
 	}
 	
-	public static void selectTopping3() {
-		System.out.print("Enter third topping: ");
+	public static void addSpecial() {
+		specialPrice = 0.0;
+		System.out.println("Do you want to add special topping to pizza, yes or no? ");
 		String input = reader.nextLine();
-		topping3 = input;
-		System.out.println("Selected "+input+" as third topping.");
-		if(input != null) {
-			topping3Price = 2.0;
-		}else topping3Price = 0;
+		System.out.println("");
+		if(input.equals("yes")){
+			specialPrice = 2.5;
+			System.out.println("Added special topping to pizza.");
+		}else if(input.equals("no")) {
+			specialPrice = 0.0;
+			System.out.println("Decided not to add special topping to pizza.");
+		}else {
+			System.out.println("Removed special topping from pizza");
+			specialPrice = 0.0;
+		}
+
 	}
 	
 	public static void selectOregano() {
@@ -86,10 +106,9 @@ public class PizzaOrder {
 	}
 	
 	public static double getPizzaPrice() {
-		double fullPrice = topping1Price + topping2Price + topping3Price + pizzaPrice;
+		double fullPrice = cheesePrice + salamiPrice + specialPrice + basePizza;
 		System.out.println("Full price for the pizza is: "+fullPrice);
 		return fullPrice;
-		
 	}
 
 }

@@ -25,13 +25,13 @@ public class PizzaMain {
 				choosePizzaSize();
 				break;
 			case 2:
-				chooseTopping1();
+				extraCheese();
 				break;
 			case 3:
-				chooseTopping2();
+				addSalami();
 				break;
 			case 4:
-				chooseTopping3();
+				addSpecial();
 				break;
 			case 5:
 				chooseOregano();
@@ -49,9 +49,9 @@ public class PizzaMain {
 		System.out.println("");
 		System.out.println("0 - Menu.\n"+
 						   "1 - Choose pizza size.\n"+
-						   "2 - Choose topping 1.\n"+
-						   "3 - Choose topping 2.\n"+
-						   "4 - Choose topping 3.\n"+
+						   "2 - Choose to add extra cheese to pizza.\n"+
+						   "3 - Choose to add salami as second topping.\n"+
+						   "4 - Choose to add special topping."+
 						   "5 - Choose oregano.\n"+
 						   "6 - Send order.\n"+
 						   "7 - Check pizza price.");
@@ -63,18 +63,18 @@ public class PizzaMain {
 		viewPizzaMenu();
 	}
 	
-	public static void chooseTopping1() {
-		PizzaOrder.selectTopping1();
+	public static void extraCheese() {
+		PizzaOrder.extraCheese();
 		viewPizzaMenu();
 	}
 	
-	public static void chooseTopping2() {
-		PizzaOrder.selectTopping2();
+	public static void addSalami() {
+		PizzaOrder.addSalami();
 		viewPizzaMenu();
 	}
 	
-	public static void chooseTopping3() {
-		PizzaOrder.selectTopping3();
+	public static void addSpecial() {
+		PizzaOrder.addSpecial();
 		viewPizzaMenu();
 	}
 	
