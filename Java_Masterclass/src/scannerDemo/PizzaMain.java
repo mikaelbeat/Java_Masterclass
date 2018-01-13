@@ -51,7 +51,7 @@ public class PizzaMain {
 						   "1 - Choose pizza size.\n"+
 						   "2 - Choose to add extra cheese to pizza.\n"+
 						   "3 - Choose to add salami as second topping.\n"+
-						   "4 - Choose to add special topping."+
+						   "4 - Choose to add special topping.\n"+
 						   "5 - Choose oregano.\n"+
 						   "6 - Send order.\n"+
 						   "7 - Check pizza price.");

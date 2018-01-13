@@ -43,7 +43,7 @@ public class PizzaOrder {
 		System.out.println("");
 		if(input.equals("yes")) {
 			cheesePrice = 1.0;
-			System.out.println("Added extra cheese to pizza.");
+			System.out.println("Added extra cheese to pizza and total price went up by 1€.");
 		}else if(input.equals("no")){
 			cheesePrice = 0.0;
 			System.out.println("Decided not to add extra cheese to pizza.");
@@ -63,7 +63,7 @@ public class PizzaOrder {
 			System.out.println("Added salami to pizza.");
 		}else if(input.equals("no")){
 			salamiPrice = 0.0;
-			System.out.println("Decided not to add salami to pizza.");
+			System.out.println("Decided not to add salami to pizza and total price went up by 1.5€.");
 		}else {
 			System.out.println("Removed salami from pizza");
 			salamiPrice = 0.0;
@@ -77,7 +77,7 @@ public class PizzaOrder {
 		System.out.println("");
 		if(input.equals("yes")){
 			specialPrice = 2.5;
-			System.out.println("Added special topping to pizza.");
+			System.out.println("Added special topping to pizza and total price went up by 2.5€");
 		}else if(input.equals("no")) {
 			specialPrice = 0.0;
 			System.out.println("Decided not to add special topping to pizza.");
