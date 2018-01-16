@@ -36,11 +36,14 @@ public class PizzaOrder {
 			basePizza += 6.0;
 			selectedPizzaSize = true;
 			System.out.println("Selected pizza size: "+size);
-			System.out.println("Pizza price is: "+basePizza+"€");
+			System.out.println("");
+			System.out.println("Normal size pizza price is: "+basePizza+"€");
 		}else if(pizzaSize.equals("large")) {
 			basePizza += 12.0;
+			selectedPizzaSize = true;
 			System.out.println("Selected pizza size: "+size);
-			System.out.println("Pizza price is: "+basePizza+"€");
+			System.out.println("");
+			System.out.println("Large size pizza price is: "+basePizza+"€");
 		}else {
 			selectPizzaSize();
 		}
@@ -74,7 +77,7 @@ public class PizzaOrder {
 		if(input.equals("yes")) {
 			salamiPrice = 1.5;
 			salamiSelected = true;
-			System.out.println("Added salami to pizza.");
+			System.out.println("Added salami to pizza and total price went up by 1.5€.");
 		}else if(input.equals("no")){
 			salamiPrice = 0.0;
 			salamiSelected = false;
@@ -110,7 +113,7 @@ public class PizzaOrder {
 		System.out.println("");
 		if(input.equals("yes")){
 			oregano = true;
-			System.out.println("You chosed to add oregano to pizza.");
+			System.out.println("You chosed to add oregano to pizza, and it is free of charge.");
 		}else if(input.equals("no")){
 			oregano = false;
 			System.out.println("You chosed not to add oregano to pizza.");
