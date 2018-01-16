@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class PizzaMain {
 	
 	static Scanner reader = new Scanner(System.in);
+	
+	static boolean quit = false;
 
 	public static void main(String[] args) {
-		
-		boolean quit = false;
+		System.out.println("*** Pizza order ***");
+		System.out.println("Order includes base pizza which can also be upgraded with extra toppings.");
+		System.out.println("For sending order at least pizza size is needed to be chosen.");
 		int choice = 0;
 		viewPizzaMenu();
 		
@@ -40,21 +43,19 @@ public class PizzaMain {
 				sendOrder();
 				break;
 			case 7:
-				checkPrice();
+				quit = true;
 			}
 		}
 	}
 	
 	public static void viewPizzaMenu() {
 		System.out.println("");
-		System.out.println("0 - Menu.\n"+
-						   "1 - Choose pizza size.\n"+
-						   "2 - Choose to add extra cheese to pizza.\n"+
-						   "3 - Choose to add salami as second topping.\n"+
-						   "4 - Choose to add special topping.\n"+
+		System.out.println("1 - Choose pizza size.\n"+
+						   "2 - Add extra cheese to pizza.\n"+
+						   "3 - Add salami as second extra topping.\n"+
+						   "4 - Add special as third extra topping.\n"+
 						   "5 - Choose oregano.\n"+
-						   "6 - Send order.\n"+
-						   "7 - Check pizza price.");
+						   "6 - Send order.");
 	}
 	
 	public static void choosePizzaSize() {
@@ -85,14 +86,9 @@ public class PizzaMain {
 	
 	public static void sendOrder() {
 		PizzaOrder.orderPizza();
-		viewPizzaMenu();
 	}
 	
-	public static void checkPrice() {
-		PizzaOrder.getPizzaPrice();
-		viewPizzaMenu();
+	public static void quit() {
+		quit = true;
 	}
-	
-	
-
 }
