@@ -176,7 +176,7 @@ public class PizzaOrder {
 		System.out.println("Toppings price is. "+toppingsPrice+"€");
 		System.out.println("Full price for the pizza is: "+fullPrice+"€");
 		System.out.println("");
-		System.out.print("Is order ok? ");
+		System.out.print("Is order ok, yes or no? ");
 		String input = reader.nextLine();
 		if(input.equals("yes")) {
 			System.out.println("");
