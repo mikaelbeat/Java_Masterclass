@@ -7,8 +7,6 @@ public class PizzaOrder {
 	static Scanner reader = new Scanner(System.in);
 	
 	protected static String pizzaSize;
-	protected static double normalPizzaPrice = 6.0;
-	protected static double largePizzaPrice = 12.00;
 	protected static boolean selectedPizzaSize = false;
 	protected static double basePizza;
 	
@@ -22,8 +20,11 @@ public class PizzaOrder {
 	protected static double cheesePrice;
 	protected static double salamiPrice;
 	protected static double specialPrice;
+	protected static double toppingsPrice;
 	
 	protected static boolean oregano = false;
+	
+	protected static double fullPrice;
 	
 	public static void selectPizzaSize() {
 		pizzaSize = null;
@@ -60,8 +61,9 @@ public class PizzaOrder {
 		if(input.equals("yes")) {
 			cheesePrice = 1.0;
 			ExtracheeseSelected = true;
+			toppingsPrice += cheesePrice;
 			System.out.println("Added extra cheese to pizza and total price went up by 1€.");
-			double addingCHeese = basePizza+cheesePrice;
+			double addingCHeese = basePizza+=cheesePrice;
 			System.out.println("");
 			System.out.println("Pizza price with added extra cheese is "+addingCHeese+"€.");
 		}else if(input.equals("no")){
@@ -84,8 +86,9 @@ public class PizzaOrder {
 		if(input.equals("yes")) {
 			salamiPrice = 1.5;
 			salamiSelected = true;
+			toppingsPrice += salamiPrice;
 			System.out.println("Added salami to pizza and total price went up by 1.5€.");
-			double addingSalami = basePizza+salamiPrice;
+			double addingSalami = basePizza+=salamiPrice;
 			System.out.println("");
 			System.out.println("Pizza price with added salami is "+addingSalami+"€.");
 		}else if(input.equals("no")){
@@ -108,8 +111,9 @@ public class PizzaOrder {
 		if(input.equals("yes")){
 			specialPrice = 2.5;
 			specialSelected = true;
+			toppingsPrice += specialPrice;
 			System.out.println("Added special topping to pizza and total price went up by 2.5€");
-			double addingSpecial = basePizza+specialPrice;
+			double addingSpecial = basePizza+=specialPrice;
 			System.out.println("");
 			System.out.println("Pizza price with added special topping is "+addingSpecial+"€.");
 		}else if(input.equals("no")) {
@@ -167,8 +171,7 @@ public class PizzaOrder {
 			System.out.println("Oregano not added to pizza.");
 		}
 		System.out.println("");
-		double fullPrice = cheesePrice + salamiPrice + specialPrice + basePizza;
-		double toppingsPrice = cheesePrice + salamiPrice + specialPrice;
+		double fullPrice = basePizza;
 		System.out.println("Price: ");
 		System.out.println("Toppings price is. "+toppingsPrice+"€");
 		System.out.println("Full price for the pizza is: "+fullPrice+"€");
