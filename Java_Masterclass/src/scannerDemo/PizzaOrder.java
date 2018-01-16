@@ -7,6 +7,8 @@ public class PizzaOrder {
 	static Scanner reader = new Scanner(System.in);
 	
 	protected static String pizzaSize;
+	protected static double normalPizzaPrice = 6.0;
+	protected static double largePizzaPrice = 12.00;
 	protected static boolean selectedPizzaSize = false;
 	protected static double basePizza;
 	
@@ -59,10 +61,15 @@ public class PizzaOrder {
 			cheesePrice = 1.0;
 			ExtracheeseSelected = true;
 			System.out.println("Added extra cheese to pizza and total price went up by 1€.");
+			double addingCHeese = basePizza+cheesePrice;
+			System.out.println("");
+			System.out.println("Pizza price with added extra cheese is "+addingCHeese+"€.");
 		}else if(input.equals("no")){
 			cheesePrice = 0.0;
 			ExtracheeseSelected = false;
 			System.out.println("Decided not to add extra cheese to pizza.");
+			System.out.println("");
+			System.out.println("Pizza price is "+basePizza+"€.");
 		}else {
 			cheesePrice = 0.0;
 			extraCheese();
@@ -78,10 +85,15 @@ public class PizzaOrder {
 			salamiPrice = 1.5;
 			salamiSelected = true;
 			System.out.println("Added salami to pizza and total price went up by 1.5€.");
+			double addingSalami = basePizza+salamiPrice;
+			System.out.println("");
+			System.out.println("Pizza price with added salami is "+addingSalami+"€.");
 		}else if(input.equals("no")){
 			salamiPrice = 0.0;
 			salamiSelected = false;
 			System.out.println("Decided not to add salami to pizza and total price went up by 1.5€.");
+			System.out.println("");
+			System.out.println("Pizza price is "+basePizza+"€.");
 		}else {
 			salamiPrice = 0.0;
 			addSalami();
@@ -97,10 +109,15 @@ public class PizzaOrder {
 			specialPrice = 2.5;
 			specialSelected = true;
 			System.out.println("Added special topping to pizza and total price went up by 2.5€");
+			double addingSpecial = basePizza+specialPrice;
+			System.out.println("");
+			System.out.println("Pizza price with added special topping is "+addingSpecial+"€.");
 		}else if(input.equals("no")) {
 			specialPrice = 0.0;
 			specialSelected = false;
 			System.out.println("Decided not to add special topping to pizza.");
+			System.out.println("");
+			System.out.println("Pizzs price is "+basePizza+"€.");
 		}else {
 			addSpecial();
 			specialPrice = 0.0;
