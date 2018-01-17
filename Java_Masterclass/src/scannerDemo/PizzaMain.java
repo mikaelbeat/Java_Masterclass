@@ -17,6 +17,7 @@ public class PizzaMain {
 		
 		while(!quit) {
 			choice = reader.nextInt();
+			System.out.println();
 			reader.nextLine();
 			System.out.println("");
 			
@@ -56,6 +57,8 @@ public class PizzaMain {
 						   "4 - Add special as third extra topping.\n"+
 						   "5 - Choose oregano.\n"+
 						   "6 - Send order.");
+		System.out.println("");
+		System.out.print("Enter selection number: ");
 	}
 	
 	public static void choosePizzaSize() {

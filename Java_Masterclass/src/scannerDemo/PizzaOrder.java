@@ -40,13 +40,13 @@ public class PizzaOrder {
 			selectedPizzaSize = true;
 			System.out.println("Selected pizza size: "+size);
 			System.out.println("");
-			System.out.println("Normal size pizza price is: "+basePizza+"€");
+			System.out.print("Normal size pizza price is: "+basePizza+"€");
 		}else if(pizzaSize.equals("large")) {
 			basePizza += 12.0;
 			selectedPizzaSize = true;
 			System.out.println("Selected pizza size: "+size);
 			System.out.println("");
-			System.out.println("Large size pizza price is: "+basePizza+"€");
+			System.out.print("Large size pizza price is: "+basePizza+"€");
 		}else {
 			selectPizzaSize();
 		}
