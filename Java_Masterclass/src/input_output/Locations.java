@@ -59,7 +59,6 @@ public class Locations implements Map<Integer, Location>{
     			IndexRecord record = new IndexRecord(startPointer, (int)(rao.getFilePointer() - startPointer));
     			index.put(location.getLocationID(),record);
     			startPointer = (int) rao.getFilePointer();
-    			
     		}
     		}
     	}
