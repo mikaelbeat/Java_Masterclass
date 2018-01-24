@@ -34,15 +34,15 @@ public class PizzaOrder {
 		String size = reader.nextLine();
 		pizzaSize = size;
 		System.out.println("");
-		if(pizzaSize.equals("normal")) {
+		if(pizzaSize.equalsIgnoreCase("normal")) {
 			basePizza += 6.0;
 			selectedPizzaSize = true;
-			System.out.println("Selected pizza size: "+size+"\n");
+			System.out.println("Selected normal size pizza.\n");
 			System.out.print("Normal size pizza price is: "+basePizza+"€");
-		}else if(pizzaSize.equals("large")) {
+		}else if(pizzaSize.equalsIgnoreCase("large")) {
 			basePizza += 12.0;
 			selectedPizzaSize = true;
-			System.out.println("Selected pizza size: "+size+"\n");
+			System.out.println("Selected large size pizza.\n");
 			System.out.print("Large size pizza price is: "+basePizza+"€");
 		}else {
 			selectPizzaSize();
@@ -55,14 +55,14 @@ public class PizzaOrder {
 		String input = reader.nextLine();
 		Extracheese = input;
 		System.out.println("");
-		if(input.equals("yes")) {
+		if(input.equalsIgnoreCase("yes")) {
 			cheesePrice = 1.0;
 			ExtracheeseSelected = true;
 			toppingsPrice += cheesePrice;
 			System.out.println("Added extra cheese to pizza and total price went up by 1€.\n");
 			double addingCHeese = basePizza+=cheesePrice;
 			System.out.println("Pizza price with added extra cheese is "+addingCHeese+"€.");
-		}else if(input.equals("no")){
+		}else if(input.equalsIgnoreCase("no")){
 			cheesePrice = 0.0;
 			ExtracheeseSelected = false;
 			System.out.println("Decided not to add extra cheese to pizza.\n");
@@ -78,14 +78,14 @@ public class PizzaOrder {
 		System.out.print("Do you want to add salami to your pizza, yes or no? ");
 		String input = reader.nextLine();
 		System.out.println("");
-		if(input.equals("yes")) {
+		if(input.equalsIgnoreCase("yes")) {
 			salamiPrice = 1.5;
 			salamiSelected = true;
 			toppingsPrice += salamiPrice;
 			System.out.println("Added salami to pizza and total price went up by 1.5€.\n");
 			double addingSalami = basePizza+=salamiPrice;
 			System.out.println("Pizza price with added salami is "+addingSalami+"€.");
-		}else if(input.equals("no")){
+		}else if(input.equalsIgnoreCase("no")){
 			salamiPrice = 0.0;
 			salamiSelected = false;
 			System.out.println("Decided not to add salami to pizza and total price went up by 1.5€.\n");
@@ -101,14 +101,14 @@ public class PizzaOrder {
 		System.out.print("Do you want to add special topping to pizza, yes or no? ");
 		String input = reader.nextLine();
 		System.out.println("");
-		if(input.equals("yes")){
+		if(input.equalsIgnoreCase("yes")){
 			specialPrice = 2.5;
 			specialSelected = true;
 			toppingsPrice += specialPrice;
 			System.out.println("Added special topping to pizza and total price went up by 2.5€\n");
 			double addingSpecial = basePizza+=specialPrice;
 			System.out.println("Pizza price with added special topping is "+addingSpecial+"€.");
-		}else if(input.equals("no")) {
+		}else if(input.equalsIgnoreCase("no")) {
 			specialPrice = 0.0;
 			specialSelected = false;
 			System.out.println("Decided not to add special topping to pizza.\n");
@@ -123,10 +123,10 @@ public class PizzaOrder {
 		System.out.print("Do you want oregano in your pizza, yes or no? ");
 		String input = reader.nextLine();
 		System.out.println("");
-		if(input.equals("yes")){
+		if(input.equalsIgnoreCase("yes")){
 			oregano = true;
 			System.out.println("You chosed to add oregano to pizza, and it is free of charge.");
-		}else if(input.equals("no")){
+		}else if(input.equalsIgnoreCase("no")){
 			oregano = false;
 			System.out.println("You chosed not to add oregano to pizza.");
 		}else {
@@ -168,11 +168,11 @@ public class PizzaOrder {
 		System.out.println("Full price for the pizza is: "+fullPrice+"€\n");
 		System.out.print("Is order ok, yes or no? ");
 		String input = reader.nextLine();
-		if(input.equals("yes")) {
+		if(input.equalsIgnoreCase("yes")) {
 			System.out.println("");
 			System.out.println("Thanks for pizza order!");
 			PizzaMain.quit();
-		}else if(input.equals("no")) {
+		}else if(input.equalsIgnoreCase("no")) {
 			System.out.println("Returning to pizza order menu.");
 			PizzaMain.viewPizzaMenu();
 		}
