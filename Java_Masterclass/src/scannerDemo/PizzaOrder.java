@@ -29,8 +29,7 @@ public class PizzaOrder {
 	public static void selectPizzaSize() {
 		pizzaSize = null;
 		basePizza = 0.0;
-		System.out.println("Available pizza sizes are normal and large.");
-		System.out.println("");
+		System.out.println("Available pizza sizes are normal and large.\n");
 		System.out.print("Enter pizza size: ");
 		String size = reader.nextLine();
 		pizzaSize = size;
@@ -38,14 +37,12 @@ public class PizzaOrder {
 		if(pizzaSize.equals("normal")) {
 			basePizza += 6.0;
 			selectedPizzaSize = true;
-			System.out.println("Selected pizza size: "+size);
-			System.out.println("");
+			System.out.println("Selected pizza size: "+size+"\n");
 			System.out.print("Normal size pizza price is: "+basePizza+"€");
 		}else if(pizzaSize.equals("large")) {
 			basePizza += 12.0;
 			selectedPizzaSize = true;
-			System.out.println("Selected pizza size: "+size);
-			System.out.println("");
+			System.out.println("Selected pizza size: "+size+"\n");
 			System.out.print("Large size pizza price is: "+basePizza+"€");
 		}else {
 			selectPizzaSize();
@@ -62,15 +59,13 @@ public class PizzaOrder {
 			cheesePrice = 1.0;
 			ExtracheeseSelected = true;
 			toppingsPrice += cheesePrice;
-			System.out.println("Added extra cheese to pizza and total price went up by 1€.");
+			System.out.println("Added extra cheese to pizza and total price went up by 1€.\n");
 			double addingCHeese = basePizza+=cheesePrice;
-			System.out.println("");
 			System.out.println("Pizza price with added extra cheese is "+addingCHeese+"€.");
 		}else if(input.equals("no")){
 			cheesePrice = 0.0;
 			ExtracheeseSelected = false;
-			System.out.println("Decided not to add extra cheese to pizza.");
-			System.out.println("");
+			System.out.println("Decided not to add extra cheese to pizza.\n");
 			System.out.println("Pizza price is "+basePizza+"€.");
 		}else {
 			cheesePrice = 0.0;
@@ -87,15 +82,13 @@ public class PizzaOrder {
 			salamiPrice = 1.5;
 			salamiSelected = true;
 			toppingsPrice += salamiPrice;
-			System.out.println("Added salami to pizza and total price went up by 1.5€.");
+			System.out.println("Added salami to pizza and total price went up by 1.5€.\n");
 			double addingSalami = basePizza+=salamiPrice;
-			System.out.println("");
 			System.out.println("Pizza price with added salami is "+addingSalami+"€.");
 		}else if(input.equals("no")){
 			salamiPrice = 0.0;
 			salamiSelected = false;
-			System.out.println("Decided not to add salami to pizza and total price went up by 1.5€.");
-			System.out.println("");
+			System.out.println("Decided not to add salami to pizza and total price went up by 1.5€.\n");
 			System.out.println("Pizza price is "+basePizza+"€.");
 		}else {
 			salamiPrice = 0.0;
@@ -112,15 +105,13 @@ public class PizzaOrder {
 			specialPrice = 2.5;
 			specialSelected = true;
 			toppingsPrice += specialPrice;
-			System.out.println("Added special topping to pizza and total price went up by 2.5€");
+			System.out.println("Added special topping to pizza and total price went up by 2.5€\n");
 			double addingSpecial = basePizza+=specialPrice;
-			System.out.println("");
 			System.out.println("Pizza price with added special topping is "+addingSpecial+"€.");
 		}else if(input.equals("no")) {
 			specialPrice = 0.0;
 			specialSelected = false;
-			System.out.println("Decided not to add special topping to pizza.");
-			System.out.println("");
+			System.out.println("Decided not to add special topping to pizza.\n");
 			System.out.println("Pizzs price is "+basePizza+"€.");
 		}else {
 			addSpecial();
