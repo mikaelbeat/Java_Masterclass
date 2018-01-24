@@ -56,7 +56,7 @@ public class PizzaMain {
 						   "3 - Add salami as second extra topping.\n"+
 						   "4 - Add special as third extra topping.\n"+
 						   "5 - Choose oregano.\n"+
-						   "6 - Send order."\n);
+						   "6 - Send order.\n");
 		System.out.print("Enter selection number: ");
 	}
 	
